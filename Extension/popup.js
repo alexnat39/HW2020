@@ -12,11 +12,15 @@ console.log("to");
 		});
 		document.getElementById("Translate").style.display = "block";
 		document.getElementById("Translate").addEventListener("click", function () {
+			document.getElementById("WaitMessage").style.display = "block";
 			Tesseract.recognize(image).then(function(result){
         		    console.log(result.text);
                             alert(result.text);
-                        });
+			    document.getElementById("download").style.display = "block";
+			    document.getElementById("download").addEventListener("click", function() {
 
+			        });
+                        });
 		});
 	}
 };
