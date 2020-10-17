@@ -1,1 +1,15 @@
-
+{
+  "manifest_version": 2,
+  
+  "name": "Image Resizer and Text Scanner Plugin",
+  "description": "Allows the user to quickly resize a screenshot to a preferred resolution, and port any text in the image into a text file.",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+    ]
+}
