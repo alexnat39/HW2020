@@ -12,16 +12,31 @@
 <br>
   Or browse files:
   <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg" onchange="loadFile(event)"/>
-  
-  <div>
+  <br>
+  <br> 
    <p><img id="output" width="200" /></p>
   
   <script>
 var loadFile = function(event) {
 	var image = document.getElementById('output');
 	image.src = URL.createObjectURL(event.target.files[0]);
+    var button = document.createElement("button");
+	button.innerHTML = "Resize";
+	var body = document.getElementsByTagName("body")[0];
+	body.appendChild(button);
+	button.addEventListener ("click", function() {
+  
+});
+var button2 = document.createElement("button");
+	button2.innerHTML = "Translate";
+	var body = document.getElementsByTagName("body")[0];
+	body.appendChild(button2);
+	button2.addEventListener ("click", function() {
+  
+});
 };
   </script>
+  
   
   </body>
 </html>
