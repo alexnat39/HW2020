@@ -9,8 +9,9 @@
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+  "content_security_policy": "script-src 'self' https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js 'self'",
+  
   "permissions": [
     "activeTab"
     ]
-  "content_security_policy": "script-src 'self' https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js 'self'",
 }
