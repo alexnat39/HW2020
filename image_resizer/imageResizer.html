@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-<a href="imageResizer.html">Resizer Link</a>
 <head>
     <meta charset="UTF-8">
     <script src="imageResizer.js"></script>
@@ -8,15 +7,25 @@
 
 <body>
 <div>
-    <p><img id="url_of_the_image" width="500" />
-    </p>
+    <img id="imagePreview" src="" alt="Preview">
 </div>
-<input type="file" id="fileInput" onchange="loadFile(event)"/>
+
+<script>
+    //uploads the image to the preview container
+    document.addEventListener("DOMContentLoaded", () => {
+        const recentImageDataURL = localStorage.getItem("current-image");
+        if (recentImageDataURL) {
+            document.querySelector("#imagePreview").setAttribute("src", recentImageDataURL);
+        }   else {
+            console.log("no image stored")
+        }
+    });
+</script>
 
 <form>
-    <label for="heightInput">Height: </label><br>
+    <label for="heightInput">Set New Height: </label><br>
     <input type="number" min="0" id="heightInput" name="heightInput" value="" style="width: 70px;" placeholder="Height"><br>
-    <label for="widthInput">Weight: </label><br>
+    <label for="widthInput">Set New Width: </label><br>
     <input type="number" min="0" id="widthInput" name="widthInput" value="" style="width: 70px;" placeholder="Width">
 </form>
 
