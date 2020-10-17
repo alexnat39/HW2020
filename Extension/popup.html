@@ -1,8 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Image Resizer / Test Scanner</title>
-    <script src="popup.js"></script>
   </head>
   <body>
     <h1>Image Resizer / <br> Test Scanner</h1>
@@ -11,12 +10,13 @@
 </div>
 <br>
   Or browse files:
-  <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg" onchange="loadFile(event)"/>
+  <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg">
+  <button id="Submit">Submit</button>
   <br>
   <br> 
   <p><img id="output" width="200" /></p>
   <button id="Resize" style="display:none">Resize</button>
   <button id="Translate" style="display:none">Scan and Translate</button>
-   
  </body>
+<script src="popup.js"></script>
 </html>
