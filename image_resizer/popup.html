@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+<head>
+    <title>Image Resizer / Test Scanner</title>
+</head>
+<body>
+<h1>Image Resizer / <br> Test Scanner</h1>
+<p>Drag and drop an image below.</p>
+<div id="dropContainer" style="border:1px solid black; height:100px; width:200px">
+</div>
+<br>
+Or browse files:
+<input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg">
+<br>
+<button id="Submit">Submit</button>
+<br>
+<br>
+<script>//stores the image inside of a local storage
+    //reads data of an image inside a local storage
+    document.querySelector("#fileInput").addEventListener("change", function () {
+        const reader = new FileReader();
+
+        reader.addEventListener("load", () => {
+            localStorage.setItem("current-image", reader.result);
+        });
+        //reads the image URL
+        reader.readAsDataURL(this.files[0]);
+    });
+</script>
+
+<p><img id="output" width="200" /></p>
+<button id="Resize" style="display:none">Resize</button>
+<button id="Translate" style="display:none">Scan and Translate</button>
+</body>
+<script src="popup.js"></script>
+</html>
