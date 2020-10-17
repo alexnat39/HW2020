@@ -11,6 +11,10 @@ console.log("to");
 		});
 		document.getElementById("Translate").style.display = "block";
 		document.getElementById("Translate").addEventListener("click", function () {
+			Tesseract.recognize(image).then(function(result){
+        		    console.log(result.text);
+                            window.alert(result.text);
+                        });
 
 		});
 	}
