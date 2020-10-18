@@ -16,6 +16,7 @@
 }
 
 .multi-button {
+    margin-top: 5px;
     display: flex;
     width: 20%;
     box-shadow: var(--shadow) 4px 4px;
@@ -66,67 +67,19 @@
 .multi-button button{
     margin-top: 5px;
 }
+
 /*css for the paragraphs*/
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-html,
-body {
+p{
     font-family: 'Fira Code', monospace;
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
+    font-size: 13px;
 }
 
-main {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
 
-p {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    font-size: 3rem;
-    background: linear-gradient(to bottom, #000, #000 60%, #fff 60%, #fff 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-    background-repeat: no-repeat;
-    transition: background 0.2s ease-out;
-    white-space: nowrap;
-}
-
-span {
-    position: relative;
-}
-
-span:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 15px;
-    background: #000;
-    bottom: 9px;
-    transition: all 0.2s ease-out;
-}
-
-p:hover {
-    background-position: 0 11px;
-}
-
-span:hover:before {
-    transform: translateY(10px)
-}
 
 /*The following few CSS make up the drop down menu for the resize function.*/
 .dropbtn {
-    background-color: #373382;
+    background-color: #729f9b;
     color: white;
     padding: 10px;
     font-size: 14px;
@@ -154,8 +107,8 @@ span:hover:before {
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: white; color: #729f9b;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover.dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover.dropbtn {background-color: #729f9b; color: white}
