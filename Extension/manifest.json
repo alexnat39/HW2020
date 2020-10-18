@@ -9,7 +9,7 @@
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.rawgit.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.rawgit.com https://cdnjs.cloudflare.com; object-src 'self'",
   "permissions": [
     "activeTab"
     ]
