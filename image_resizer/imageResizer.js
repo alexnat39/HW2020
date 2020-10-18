@@ -65,6 +65,14 @@ function getNewWidth() {
     return widthInput;
 
 }
+//uploads the image to the preview container
+document.addEventListener("DOMContentLoaded", () => {
+    const recentImageDataURL = localStorage.getItem("current-image");
+    if (recentImageDataURL) {
+        document.querySelector("#imagePreview").setAttribute("src", recentImageDataURL);
+    }   else {
+        console.log("no image stored")
+    }
+});
 document.getElementById("ResizeFinal").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth())})
 // .open - opens a new tab
-
