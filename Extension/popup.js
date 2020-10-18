@@ -18,6 +18,10 @@ console.log("to");
                             alert(result.text);
 			    document.getElementById("download").style.display = "block";
 			    document.getElementById("download").addEventListener("click", function() {
+				    var text = result.text;
+				    var data = new Blob([text], {type: 'text/plain'});
+				    var url = window.URL.createObjectURL(data);
+				    document.getElementById('download').href = url;
 
 			        });
                         });
