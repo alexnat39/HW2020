@@ -56,7 +56,7 @@ function getNewWidth() {
 }
 
 
-document.getElementById("png").addEventListener("click", function() {resizeDimensions(getNewWidth(), getNewHeight(), 1)})
-document.getElementById("jpeg").addEventListener("click", function() {resizeDimensions(getNewWidth(), getNewHeight(), 2)})
-document.getElementById("jpg").addEventListener("click", function() {resizeDimensions(getNewWidth(), getNewHeight(), 3)})
+document.getElementById("png").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth(), 1)})
+document.getElementById("jpeg").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth(), 2)})
+document.getElementById("jpg").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth(), 3)})
 // .open - opens a new tab
