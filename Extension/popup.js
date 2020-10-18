@@ -8,6 +8,7 @@ function loadFile() {
     var fileInput = document.getElementById("fileInput");
     if(fileInput.files[0]) {
         document.getElementById("Submit").style.display = "none";
+        document.getElementById("output").style.display = "block";
         image.src = URL.createObjectURL(fileInput.files[0]);
         document.getElementById("Resize").style.display = "block";
         document.getElementById("Resize").addEventListener("click", function () {
