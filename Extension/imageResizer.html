@@ -15,7 +15,6 @@
     </style>
     <link rel="stylesheet" href="cssStuff.css">
 </head>
-
 <body>
 <h1>Image Resizer</h1>
 <div>
@@ -29,8 +28,13 @@
     <input type="number" min="0" id="widthInput" name="widthInput" value="" style="width: 70px;" placeholder="Width">
 </form>
 
-<div class="multi-button">
-    <button id="ResizeFinal">Resize</button>
+<div class="dropdown">
+  <button class="dropbtn">Resize As</button>
+  <div class="dropdown-content">
+    <a id="png" href="#" type=button>.png file</a>
+    <a id="jpeg" href="#" type=button>.jpeg file</a>
+    <a id="jpg" href="#" type=button>.jpg file</a>
+  </div>
 </div>
 
 <div>
