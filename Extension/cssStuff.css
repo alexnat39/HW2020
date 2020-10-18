@@ -126,7 +126,7 @@ span:hover:before {
 
 /*The following few CSS make up the drop down menu for the resize function.*/
 .dropbtn {
-    background-color: blue;
+    background-color: #373382;
     color: white;
     padding: 10px;
     font-size: 14px;
