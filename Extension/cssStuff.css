@@ -161,3 +161,8 @@ h1 {
     text-align: left;
     text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
+
+/* add CSS for a link*/
+a{
+    color: #159ce5;
+}
