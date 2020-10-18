@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
@@ -17,18 +16,19 @@ Or browse files:
 <button id="Submit">Submit</button>
 <br>
 <br>
-<script>//stores the image inside of a local storage
-    //reads data of an image inside a local storage
-    document.querySelector("#fileInput").addEventListener("change", function () {
-        const reader = new FileReader();
 
-        reader.addEventListener("load", () => {
-            localStorage.setItem("current-image", reader.result);
-        });
-        //reads the image URL
-        reader.readAsDataURL(this.files[0]);
-    });
-</script>
+<!--<script>//stores the image inside of a local storage-->
+<!--    //reads data of an image inside a local storage-->
+<!--    document.querySelector("#fileInput").addEventListener("change", function () {-->
+<!--        const reader = new FileReader();-->
+
+<!--        reader.addEventListener("load", () => {-->
+<!--            localStorage.setItem("current-image", reader.result);-->
+<!--        });-->
+<!--        //reads the image URL-->
+<!--        reader.readAsDataURL(this.files[0]);-->
+<!--    });-->
+<!--</script>-->
 
 <p><img id="output" width="200" /></p>
 <button id="Resize" style="display:none">Resize</button>
