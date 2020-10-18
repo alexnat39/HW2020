@@ -1,21 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <title>Extension Page</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="cssStuff.css">
+    <style>
+        img{
+            max-width:300px;
+            max-height:300px;
+        }
+        button{
+            background: aquamarine;
+            margin-top: 5px;
+            width: 100px;
+            height: 40px;
+            opacity: 0.6;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="cssStuff.css">
 </head>
-<style>
-    img{
-        max-width:300px;
-        max-height:300px;
-    }
-    button{
-        background: aquamarine;
-        margin-top: 5px;
-        width: 100px;
-        height: 40px;
-        opacity: 0.6;
-    }
-</style>
+
 <body>
 <h1>Image Resizer</h1>
 <div>
@@ -29,7 +35,9 @@
     <input type="number" min="0" id="widthInput" name="widthInput" value="" style="width: 70px;" placeholder="Width">
 </form>
 
-<button id="ResizeFinal">Resize</button>
+<div class="multi-button">
+    <button id="ResizeFinal">Resize</button>
+</div>
 
 <div>
     <p><img id="output"/>
