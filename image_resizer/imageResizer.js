@@ -56,7 +56,5 @@ function getNewWidth() {
     return widthInput;
 
 }
+document.getElementById("ResizeFinal").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth())})
 // .open - opens a new tab
-
-
-
