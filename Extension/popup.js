@@ -8,7 +8,7 @@ console.log("to");
 		image.src = URL.createObjectURL(fileInput.files[0]);
 		document.getElementById("Resize").style.display = "block";
 		document.getElementById("Resize").addEventListener("click", function () {
-
+			location.href = "imageResizer.html";
 		});
 		document.getElementById("Translate").style.display = "block";
 		document.getElementById("Translate").addEventListener("click", function () {
@@ -23,8 +23,17 @@ console.log("to");
 				    document.getElementById('download').href = url;
 
 			        });
-                        });
+			});
 		});
 	}
 };
+document.querySelector("#fileInput").addEventListener("change", function () {
+	const reader = new FileReader();
+
+	reader.addEventListener("load", () => {
+		localStorage.setItem("current-image", reader.result);
+	});
+	//reads the image URL
+	reader.readAsDataURL(this.files[0]);
+});
 
