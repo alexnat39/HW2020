@@ -2,6 +2,7 @@ src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'
 document.getElementById("Submit").addEventListener("click", function() {loadFile()})
 function loadFile() {
 console.log("to");
+	document.getElementById("Submit").style.display = "none";
 	var image = document.getElementById('output');
 	var fileInput = document.getElementById("fileInput");
 	if(fileInput.files[0]) {
