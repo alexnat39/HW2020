@@ -44,7 +44,7 @@ function resizeDimensions(height, width) {
 
         var resizedImage = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
         canvas.toBlob(function(blob) {
-            saveAs(blob, "screenshot.png");
+            saveAs(blob, "resize.png");
         }, "image/png");
 
     }
