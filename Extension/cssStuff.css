@@ -148,3 +148,16 @@ img{
     max-width:300px;
     max-height:300px;
 }
+
+/* This is CSS for h1 */
+
+h1 {
+    font-family: "Arial Black", sans-serif;
+    margin-bottom: -2px;
+    font-size: 35px;
+    letter-spacing: -2px;
+    font-weight: 1000;
+    color: #729f9b;
+    text-align: left;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
