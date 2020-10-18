@@ -6,10 +6,23 @@ function loadFile() {
 
 
     if(fileInput.files[0]) {
+
         //calls either scan&translate function or the resize dimension function
         image.src = URL.createObjectURL(fileInput.files[0]);
         document.getElementById("Resize").style.display = "block";
         document.getElementById("Resize").addEventListener("click", function () {
+            //stores the image inside of a local storage
+            //reads data of an image inside a local storage
+            document.querySelector("#fileInput").addEventListener("change", function () {
+                const reader = new FileReader();
+
+                reader.addEventListener("load", () => {
+                    localStorage.setItem("current-image", reader.result);
+                });
+                //reads the image URL
+               
+                reader.readAsDataURL(this.files[0]);
+            });
             location.href = "imageResizer.html";
         });
         document.getElementById("Translate").style.display = "block";
