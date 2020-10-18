@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //     image = document.getElementById('output');
 //     image.src = URL.createObjectURL(event.target.files[0]);
 // }
-function resizeDimensions(height, width) {
+function resizeDimensions(height, width, type) {
     const recentImageDataURL = localStorage.getItem("current-image");
     image = document.getElementById("imagePreview");
 
@@ -29,10 +29,19 @@ function resizeDimensions(height, width) {
         ctx.drawImage(image, 0, 0, width, height);
 
         var resizedImage = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-        canvas.toBlob(function(blob) {
-            saveAs(blob, "resize.png");
-        }, "image/png");
-
+        if(type == 1) {
+            canvas.toBlob(function (blob) {
+                saveAs(blob, "resize.png");
+            }, "image/png");
+        } else if(type == 2) {
+            canvas.toBlob(function (blob) {
+                saveAs(blob, "resize.jpeg");
+            }, "image/jpeg");
+        } else if(type == 3) {
+            canvas.toBlob(function (blob) {
+                saveAs(blob, "resize.jpg");
+            }, "image/jpg");
+        }
     }
 }
 function getNewHeight() {
@@ -46,5 +55,8 @@ function getNewWidth() {
 
 }
 
-document.getElementById("ResizeFinal").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth())})
+
+document.getElementById("png").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth(), 1)})
+document.getElementById("jpeg").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth(), 2)})
+document.getElementById("jpg").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth(), 3)})
 // .open - opens a new tab
