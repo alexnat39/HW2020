@@ -43,7 +43,9 @@ function resizeDimensions(height, width) {
         ctx.drawImage(image, 0, 0, width, height);
 
         var resizedImage = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-        window.location.href = resizedImage;
+        canvas.toBlob(function(blob) {
+            saveAs(blob, "screenshot.png");
+        }, "image/png");
 
     }
 }
