@@ -21,20 +21,6 @@ function resizeDimensions(height, width) {
     if (recentImageDataURL) {
         //creates an empty canvas
         var canvas = document.createElement("canvas");
-        var MAX_WIDTH = 600;
-        var MAX_HEIGHT = 600;
-        //checks for image height and width not to mess the way they look
-        if (width > height) {
-            if (width > MAX_WIDTH) {
-                height *= MAX_WIDTH / width;
-                width = MAX_WIDTH;
-            }
-        } else {
-            if (height > MAX_HEIGHT) {
-                width *= MAX_HEIGHT / height;
-                height = MAX_HEIGHT;
-            }
-        }
         //setting the new width and height of a canvas as the parameters we passed in
         canvas.width = width;
         canvas.height = height;
