@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script> 
-  <head>
+<script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+<head>
     <title>Image Resizer / Text Scanner</title>
-  </head>
+</head>
 <style>
     img{
-        width: auto;
-        height: auto;
-        max-width:200px;
-        max-height:200px;
+        max-width:300px;
+        max-height:300px;
+    }
+    button{
+        background: aquamarine;
+        margin-top: 5px;
+        width: 100px;
+        height: 40px;
+        opacity: 0.6;
+    }
+    p{
+        font-size: 15px;
     }
 </style>
-  <body>
-    <h1>Image Resizer / <br> Text Scanner</h1>
-    <p><img id="output" width="200" /></p>
-  Browse or drag and drop a file:<br><br>
-  <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg">
-  <br>
-  <button id="Submit">Submit</button>
-  <br>
-  <br> 
-  <button id="Resize" style="display:none">Resize</button>
-  <button id="Translate" style="display:none">Scan and Translate</button>
-  <p id="WaitMessage" style="display:none">Scanning the image, please wait...</p>
-  <form method="get" action="file.doc">
+<body>
+<h1>Image Resizer / <br> Text Scanner</h1>
+<p><img id="output"/></p>
+Browse or drag and drop a file:<br><br>
+<input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg">
+<br>
+<button id="Submit">Submit</button>
+<br>
+<button id="Resize" style="display:none">Resize</button>
+<button id="Translate" style="display:none">Scan and Translate</button>
+<p id="WaitMessage" style="display:none">Scanning the image, please wait...</p>
+<form method="get" action="file.doc">
     <a id="download" download="my_exported_file.txt" href=”” style="display:none">Download as Text File</a>
-  </form>
- </body>
+</form>
+</body>
 <script src="popup.js"></script>
 </html>
+
