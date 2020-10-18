@@ -9,17 +9,17 @@
     <img id="imagePreview" src="" alt="Preview">
 </div>
 
-<script>
-    //uploads the image to the preview container
-    document.addEventListener("DOMContentLoaded", () => {
-        const recentImageDataURL = localStorage.getItem("current-image");
-        if (recentImageDataURL) {
-            document.querySelector("#imagePreview").setAttribute("src", recentImageDataURL);
-        }   else {
-            console.log("no image stored")
-        }
-    });
-</script>
+<!--<script>-->
+<!--    //uploads the image to the preview container-->
+<!--    document.addEventListener("DOMContentLoaded", () => {-->
+<!--        const recentImageDataURL = localStorage.getItem("current-image");-->
+<!--        if (recentImageDataURL) {-->
+<!--            document.querySelector("#imagePreview").setAttribute("src", recentImageDataURL);-->
+<!--        }   else {-->
+<!--            console.log("no image stored")-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
 
 <form>
     <label for="heightInput">Set New Height: </label><br>
@@ -41,5 +41,5 @@
 </a>
 
 </body>
-    <script src="imageResizer.js"></script>
+<script src="imageResizer.js"></script>
 </html>
