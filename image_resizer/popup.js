@@ -4,7 +4,6 @@ function loadFile() {
     var image = document.getElementById('output');
     var fileInput = document.getElementById("fileInput");
     if(fileInput.files[0]) {
-
         //calls either scan&translate function or the resize dimension function
         image.src = URL.createObjectURL(fileInput.files[0]);
         document.getElementById("Resize").style.display = "block";
