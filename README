@@ -1,1 +1,4 @@
-
+This is a web extension that allows the user to change the dimensions of an image and transcribe
+text from an image into a file.
+I order to run it, the user has to go to chrome://extensions and enable developer mode, click "load
+unpacked", and then browse the copmuter for the "Extension" folder.
