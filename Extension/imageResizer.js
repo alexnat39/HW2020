@@ -55,7 +55,7 @@ function getNewWidth() {
 
 }
 
-
+document.getElementById("back").addEventListener("click", function() {location.href = "popup.html";})
 document.getElementById("png").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth(), 1)})
 document.getElementById("jpeg").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth(), 2)})
 document.getElementById("jpg").addEventListener("click", function() {resizeDimensions(getNewHeight(), getNewWidth(), 3)})
