@@ -109,6 +109,6 @@ p{
 
 .dropdown-content a:hover {background-color: white; color: #729f9b;}
 
-.dropdown:hover.dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover.dropbtn {background-color: #729f9b; color: white}
+.dropdown:hover .dropbtn {background-color: #729f9b; color: white;}
