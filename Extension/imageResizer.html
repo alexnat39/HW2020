@@ -5,18 +5,22 @@
 </head>
 <style>
     img{
-        width: auto;
-        height: auto;
-        max-width:200px;
-        max-height:200px;
+        max-width:300px;
+        max-height:300px;
+    }
+    button{
+        background: aquamarine;
+        margin-top: 5px;
+        width: 100px;
+        height: 40px;
+        opacity: 0.6;
     }
 </style>
 <body>
+<h1>Image Resizer</h1>
 <div>
-    <img id="imagePreview" src="" alt="Preview">
+    <img class="contain" id="imagePreview" src="" alt="Preview">
 </div>
-
-
 
 <form>
     <label for="heightInput">Set New Height: </label><br>
@@ -25,15 +29,12 @@
     <input type="number" min="0" id="widthInput" name="widthInput" value="" style="width: 70px;" placeholder="Width">
 </form>
 
-
 <button id="ResizeFinal">Resize</button>
 
 <div>
-    <p><img id="output" width="200" />
+    <p><img id="output"/>
     </p>
 </div>
-
-
 
 </body>
 <script src="imageResizer.js"></script>
